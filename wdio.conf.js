@@ -22,7 +22,8 @@ exports.config = {
     //
     specs: [
         // './test/specs/**/*.js'
-        './test/specs/standardUserSpecs.js'
+        // './test/specs/standardUserSpecs.js'
+        './test/specs/performanceGlitchUserSpecs.js'
     ],
     // Patterns to exclude.
     exclude: [
