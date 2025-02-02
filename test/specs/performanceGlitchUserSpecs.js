@@ -1,5 +1,6 @@
 const loginAction = require("../page/loginTest/loginAction");
 const homeAction = require("../page/purchaseStrandardUser/home/homeAction");
+const filterByNameAction = require("../page/performanceGlitchUser/filterByName/filterByNameAction");
 
 const performanceGlitchUser = "performance_glitch_user";
 
@@ -15,6 +16,11 @@ describe("Logint with standard_user login", () => {
         await homeAction.naviGateHamburgerMenuAction();
         await homeAction.resetAppStateAction();
         await homeAction.closeMenuAction();
+    });
+
+    it("Filter By Name", async () => {
+        await filterByNameAction.ClickFilterButton();
+        await filterByNameAction.ClicksetValue();
     });
 
 });
