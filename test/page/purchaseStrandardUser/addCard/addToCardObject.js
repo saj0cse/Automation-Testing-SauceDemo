@@ -1,11 +1,14 @@
 
 class addToCardObject{
-    // addedProductsListObject(cardNumber) {
-    //     return $(`(//div[@class='inventory_item_name'])[${cardNumber}]`);
-    // }
-
+   
+    get productsName(){
+        return  (cardNumber) => $(`(//div[contains(@class, 'inventory_item_name')])[${cardNumber}]`);
+    }
+    get productsPrice(){
+        return  (cardNumber) => $(`(//div[contains(@class, 'inventory_item_price')])[${cardNumber}]`);
+    }
     get addToCardObject(){
-        return  (cardNumber) => $(`(//button[contains(text(),'Add to cart')])[${cardNumber}]`);
+        return  (cardNumber) => $(`(//button[contains(@class,'btn_inventory')])[${cardNumber}]`);
     }
 
    
