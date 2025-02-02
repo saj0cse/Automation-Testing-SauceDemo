@@ -1,9 +1,12 @@
-const loginAction = require("../page/login/loginAction");
+const loginAction = require("../page/loginTest/loginAction");
+
+
+const lockedOutUser = "locked_out_user";
 
 describe("Login test with locked_out_user", () =>{
 
-    it("loging user", async () => {
-       await loginAction.usernameAction();
+    it("locked_out_user login", async () => {
+       await loginAction.usernameAction(lockedOutUser);
        await loginAction.passwordAction();
        await loginAction.loginClickAction();
     });
@@ -15,3 +18,5 @@ describe("Login test with locked_out_user", () =>{
     });
 
 });
+
+

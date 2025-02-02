@@ -21,7 +21,8 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.js'
+        // './test/specs/**/*.js'
+        './test/specs/standardUserSpecs.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -238,8 +239,9 @@ exports.config = {
      * Hook that gets executed after the suite has ended
      * @param {object} suite suite details
      */
-    // afterSuite: function (suite) {
-    // },
+    afterSuite: async function (suite) {
+        await browser.pause(10000);
+    },
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {string} commandName hook command name
