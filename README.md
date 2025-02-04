@@ -20,6 +20,7 @@ Additionally, you’ll need the following packages installed:
 - **Mocha** (Test Framework)
 
 
+
 ## Installation
 1. **Clone the Repository**  
    Clone the repository to your local machine:
@@ -43,8 +44,6 @@ Use the `npm init` wizard to initialize the project with the following options:
    - **Keywords**: `webdriverio_page_object_framework`
    - **Author**: `Shakil_Ahammed`
    - **License**: `ISC`
-
-
 
 ### 3. Install WebDriverIO CLI
 
@@ -84,28 +83,6 @@ npm install @wdio/allure-reporter --save-dev
 npm install -g allure-commandline --save-dev
 ```
 
-### 6. Running Tests and Generating Allure Report
-
-To run your tests and generate the Allure report, follow these steps:
-
-1. **Run the tests**:
-   ```bash
-   npx wdio run wdio.conf.js
-   ```
-
-2. **Generate the Allure report**:
-   After the tests complete, generate the Allure report with:
-   ```bash
-   allure generate allure-results --clean
-   ```
-
-3. **Open the Allure report**:
-   To view the generated report, run:
-   ```bash
-   allure open
-   ```
-The Allure report will open in your browser, displaying detailed information about the test execution, including passed, failed, and skipped tests.
-
 
 ## Tests to Be Executed
 ### 01 - Locked Out User Login Test
@@ -130,6 +107,31 @@ The Allure report will open in your browser, displaying detailed information abo
   5. Navigate to checkout and verify product names and total price.
   6. Complete the purchase and verify a successful order message.
   7. Reset App State again and log out.
+
+
+
+### 01. Running Tests and Generating Allure Report
+
+To run your tests and generate the Allure report, follow these steps:
+
+1. **Run the tests**:
+   ```bash
+   npx wdio run wdio.conf.js
+   ```
+
+2. **Generate the Allure report**:
+   After the tests complete, generate the Allure report with:
+   ```bash
+   allure generate allure-results --clean
+   ```
+
+3. **Open the Allure report**:
+   To view the generated report, run:
+   ```bash
+   allure open
+   ```
+The Allure report will open in your browser, displaying detailed information about the test execution, including passed, failed, and skipped tests.
+
 
 
 ## Contact
