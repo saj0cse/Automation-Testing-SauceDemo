@@ -249,7 +249,7 @@ exports.config = {
     afterSuite: async function (suite) {
         // await browser.pause(5000);
         // need condition 
-        await browser.quit();
+        // await browser.quit();
     },
     /**
      * Runs after a WebdriverIO command gets executed

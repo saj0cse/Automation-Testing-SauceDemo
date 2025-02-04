@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
-    "getReport": "allure generate allure-results --clean && allure open"
+    "getReport": "allure generate allure-results --clean && allure open",
+    "test:login": "npx wdio run wdio.conf.js --spec test/specs/loginTestSpecs.js",
+    "test:standard": "npx wdio run wdio.conf.js --spec test/specs/standardUserSpecs.js",
+    "test:performance": "npx wdio run wdio.conf.js --spec test/specs/performanceGlitchUserSpecs.js",
+    "test:all": "npx wdio run wdio.conf.js"
   },
   "keywords": [
     "webdriverio_page_object_framework"

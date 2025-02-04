@@ -13,37 +13,37 @@ const firstName = "Shakil";
 const lastName = "Cse";
 const postalCode = 2026;
 let productsName = [];
-let ProductsPrice = 0 ;
+let ProductsPrice = 0;
 let verifyProductsPrice = 0;
 
-describe("Logint with standard_user login", () => {
+describe("performance_glitch_user test automation", () => {
 
-    it("standard_user login", async () => {
+    it("1. performance_glitch_user login", async () => {
         await loginAction.usernameAction(performanceGlitchUser);
         await loginAction.passwordAction();
         await loginAction.loginClickAction();
     });
 
-    it("hamburger menu to Reset App State", async () => {
+    it("2. hamburger menu to Reset App State", async () => {
         await homeAction.naviGateHamburgerMenuAction();
         await homeAction.resetAppStateAction();
         await homeAction.closeMenuAction();
     });
 
-    it("Filter By Name", async () => {
+    it("3. Filter By Name", async () => {
         await filterByNameAction.ClickFilterButton();
         await filterByNameAction.ClicksetValue();
     });
-    it("Get Products Name and Price List", async () => {
+    it("4. Get Products Name and Price List", async () => {
         const ProductsName = await addToCardAction.getProductsName(cardNumbers);
         console.log("Click Products Name: " + ProductsName);
         ProductsPrice = await addToCardAction.getProductsPrice(cardNumbers);
         console.log("Click Products Price: " + ProductsPrice);
     });
-    it("Add To Card", async () => {
+    it("5. Add To Card", async () => {
         await addToCardAction.clickAddToCard(cardNumbers);
     });
-    it("Check Out Card", async () => {
+    it("6. Check Out Card", async () => {
         await checkOutAction.shoppinCardIconAction();
         await checkOutAction.checkOutAction();
         await checkOutAction.firstNameAction(firstName);
@@ -51,32 +51,32 @@ describe("Logint with standard_user login", () => {
         await checkOutAction.postalCodeAction(postalCode);
         await checkOutAction.checkOutContinueAction();
     });
-    it("verify Card Products Name And Price", async () => {
-            const verifyProductsName = await verifyCardAction.getVerifyProductsName(cardNumbers);
-            console.log("Verify Products Name: " + verifyProductsName);
-            expect(productsName).toHaveText(verifyProductsName);
-    
-            verifyProductsPrice = await verifyCardAction.getVerifyProductsPrice(cardNumbers);
-            console.log("Verify Products Price: " + verifyProductsPrice);
-            expect(ProductsPrice).toBe(verifyProductsPrice);
-    
-            const verifyTotaProductsPrice = await verifyCardAction.getverifyTotalPrice();
-            expect(ProductsPrice).toBe(verifyTotaProductsPrice);
-            console.log(verifyTotaProductsPrice);
-         })
-        it("Successful Order Message", async () => {
-            await successfullMessageAction.getVerifyfinishButton();
-            await expect(successfullMessageAction.successfulCompleteHeader).toBeDisplayed();
-            await expect(successfullMessageAction.successfulCompleteHeader).toHaveText("Thank you for your order!");
-            await expect(successfullMessageAction.successfulCompleteText).toBeDisplayed();
-            await expect(successfullMessageAction.successfulCompleteText).toHaveText("Your order has been dispatched, and will arrive just as fast as the pony can get there!");
-        });
-        it("hamburger menu to Reset App State", async () => {
-            await homeAction.naviGateHamburgerMenuAction();
-            await homeAction.resetAppStateAction();
-        });
-        it("Log Out", async () => {
-            await logOutAction.clickLogOut();
-        });
+    it("7. verify Card Products Name And Price", async () => {
+        const verifyProductsName = await verifyCardAction.getVerifyProductsName(cardNumbers);
+        console.log("Verify Products Name: " + verifyProductsName);
+        expect(productsName).toHaveText(verifyProductsName);
+
+        verifyProductsPrice = await verifyCardAction.getVerifyProductsPrice(cardNumbers);
+        console.log("Verify Products Price: " + verifyProductsPrice);
+        expect(ProductsPrice).toBe(verifyProductsPrice);
+
+        const verifyTotaProductsPrice = await verifyCardAction.getverifyTotalPrice();
+        expect(ProductsPrice).toBe(verifyTotaProductsPrice);
+        console.log(verifyTotaProductsPrice);
+    })
+    it("8. Successful Order Message", async () => {
+        await successfullMessageAction.getVerifyfinishButton();
+        await expect(successfullMessageAction.successfulCompleteHeader).toBeDisplayed();
+        await expect(successfullMessageAction.successfulCompleteHeader).toHaveText("Thank you for your order!");
+        await expect(successfullMessageAction.successfulCompleteText).toBeDisplayed();
+        await expect(successfullMessageAction.successfulCompleteText).toHaveText("Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+    });
+    it("9. hamburger menu to Reset App State", async () => {
+        await homeAction.naviGateHamburgerMenuAction();
+        await homeAction.resetAppStateAction();
+    });
+    it("10. Log Out", async () => {
+        await logOutAction.clickLogOut();
+    });
 
 });

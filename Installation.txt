@@ -54,5 +54,5 @@ WDIO Allure Reporter
 ===============================
 npm install @wdio/allure-reporter --save-dev
 npm install -g allure-commandline --save-dev
-npm run allure-results
-allure generate allure-results && allure open
+
+allure generate allure-results; allure open
