@@ -43,3 +43,9 @@ npx wdio config
 ✔ Do you want to add a service to your test setup?
 ✔ Do you want me to run `npm install` yes
 
+
+-> WDIO Allure Reporter
+npm install @wdio/allure-reporter --save-dev
+npm install -g allure-commandline --save-dev
+npm run allure-results
+allure generate allure-results && allure open

@@ -58,9 +58,10 @@ describe("Logint with standard_user login", () => {
     
             verifyProductsPrice = await verifyCardAction.getVerifyProductsPrice(cardNumbers);
             console.log("Verify Products Price: " + verifyProductsPrice);
-            expect(ProductsPrice).toHaveText(verifyProductsPrice);
+            expect(ProductsPrice).toBe(verifyProductsPrice);
     
             const verifyTotaProductsPrice = await verifyCardAction.getverifyTotalPrice();
+            expect(ProductsPrice).toBe(verifyTotaProductsPrice);
             console.log(verifyTotaProductsPrice);
          })
         it("Successful Order Message", async () => {

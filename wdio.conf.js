@@ -22,7 +22,8 @@ exports.config = {
     //
     specs: [
         // './test/specs/**/*.js'
-        // './test/specs/standardUserSpecs.js'
+        './test/specs/loginTestSpecs.js',
+        './test/specs/standardUserSpecs.js',
         './test/specs/performanceGlitchUserSpecs.js'
     ],
     // Patterns to exclude.
@@ -112,7 +113,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -126,7 +127,12 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    // reporters: ['spec'],
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -241,7 +247,9 @@ exports.config = {
      * @param {object} suite suite details
      */
     afterSuite: async function (suite) {
-        await browser.pause(10000);
+        // await browser.pause(5000);
+        // need condition 
+        await browser.quit();
     },
     /**
      * Runs after a WebdriverIO command gets executed

@@ -2,9 +2,9 @@ const loginObject = require("./loginObject");
 
 
 class loginAction{
-    async usernameAction(lockedOutUser){
+    async usernameAction(UserId){
         await loginObject.usernameInput.click();
-        await loginObject.usernameInput.setValue(lockedOutUser);
+        await loginObject.usernameInput.setValue(UserId);
     }
 
     async passwordAction(){
