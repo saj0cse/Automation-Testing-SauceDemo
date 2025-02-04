@@ -1,6 +1,3 @@
-Here is the complete README file for your **Automation Testing - SauceDemo Website** project in the correct format:
-
-```markdown
 # Automation Testing - SauceDemo Website
 
 ## Description
