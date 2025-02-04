@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"2ed2a4201d49aa16fdb6cf04ed42227c","name":"Logint with standard_user login","statistic":{"failed":0,"broken":0,"skipped":0,"passed":9,"unknown":0,"total":9}},{"uid":"73ce87b9fa8dd0a19bec5dcccca012eb","name":"Login test with locked_out_user","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
